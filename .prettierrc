@@ -1,0 +1,41 @@
+{
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "endOfLine": "crlf",
+  "overrides": [
+    {
+        "files": "*.vue",
+        "options": {
+            "semi": false,
+            "parser": "vue"
+        }
+    },
+
+    {
+      "files": [".prettierrc", "*.json"],
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": ["*.php"],
+      "options": {
+        "printWidth": 80,
+        "tabWidth": 4,
+        "phpVersion": "7.4",
+        "braceStyle": "psr-2"
+      }
+    },
+    {
+        "files": ["*.php", "*.vue"],
+        "options": {
+            "singleQuote": false
+        }
+    }
+  ]
+}
