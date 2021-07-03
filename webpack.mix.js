@@ -11,7 +11,16 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix
+  .js('resources/js/app.js', 'public/js')
+  .vue({ version: 2 })
+  .options({
+    hmrOptions: {
+      host: 'localhost',
+      port: 8080
+    }
+  })
+  .disableNotifications();
+//   .postCss('resources/css/app.css', 'public/css',
+//     //
+//   ]);
