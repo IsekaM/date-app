@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Date;
-use Illuminate\Http\Request;
-use App\Helpers\Classes\Dioxide;
 use App\Http\Requests\DateRequest;
 use App\Repository\DateRepository;
 
@@ -37,6 +34,6 @@ class DateController extends Controller
     {
         $result = $this->service->getResult();
 
-        return response()->json($result);
+        return response()->json($result, 201);
     }
 }
